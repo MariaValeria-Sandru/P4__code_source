@@ -10,11 +10,11 @@ body {
 a,
 button {
   transition: all .3s ease-in-out;
-  outline: none!important;
+  /*outline: none!important;*/
 }
 
 a:hover {
-  text-decoration: none;
+  /*text-decoration: none;*/
   cursor: pointer;
 }
 
@@ -100,11 +100,16 @@ a:hover {
 }
 
 .d-bloc {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255);
+  /*color: rgba(255, 255, 255, .7);*/
 }
 
-.d-bloc button:hover {
-  color: rgba(255, 255, 255, .9);
+/*.d-bloc button:hover {
+  color: rgba(255, 255, 255, 0.9);
+}*/
+.d-bloc button:hover,
+.d-bloc button:focus {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .d-bloc .icon-round,
@@ -112,13 +117,15 @@ a:hover {
 .d-bloc .icon-rounded,
 .d-bloc .icon-semi-rounded-a,
 .d-bloc .icon-semi-rounded-b {
-  border-color: rgba(255, 255, 255, .9);
+  /*border-color: rgba(255, 255, 255, .9);*/
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .d-bloc .divider-h span {
-  border-color: rgba(255, 255, 255, .2);
+  /*border-color: rgba(255, 255, 255, .2);*/
+  border-color: rgba(255, 255, 255, 0.2);
 }
-
+/*
 .d-bloc .a-btn,
 .d-bloc .navbar a,
 .d-bloc .navbar-brand,
@@ -134,8 +141,87 @@ a:hover {
 .d-bloc h6 a,
 .d-bloc p a {
   color: rgba(255, 255, 255, .6);
+}*/
+
+
+.d-bloc .navbar-toggle .icon-bar {
+  background: rgba(255, 255, 255, 1);
 }
 
+.d-bloc .btn-wire,
+.d-bloc .btn-wire:hover,
+.d-bloc .btn-wire:focus {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.d-bloc .panel {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.d-bloc .panel button:hover,
+.d-bloc .panel button:focus {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.d-bloc .panel icon {
+  border-color: rgba(0, 0, 0, 0.7);
+}
+
+.d-bloc .panel .divider-h span {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.d-bloc .panel .a-btn {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.d-bloc .panel .a-btn:hover,
+.d-bloc .panel .a-btn:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.d-bloc .panel .btn-wire,
+.d-bloc .panel .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus {
+  color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.d-bloc .panel,
+.l-bloc {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.l-bloc .icon-round,
+.l-bloc .icon-square,
+.l-bloc .icon-rounded,
+.l-bloc .icon-semi-rounded-a,
+.l-bloc .icon-semi-rounded-b {
+  border-color: rgba(0, 0, 0, 0.7);
+}
+
+.d-bloc .panel .divider-h span,
+.l-bloc .divider-h span {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.d-bloc .panel .a-btn,
+.l-bloc .a-btn,
+.l-bloc .navbar a,
+.l-bloc .navbar-brand,
+.l-bloc a .icon-sm,
+.l-bloc a .icon-md,
+.l-bloc a .icon-lg,
+.l-bloc a .icon-xl,
+.l-bloc h1 a,
+.l-bloc h2 a,
+.l-bloc h3 a,
+.l-bloc h4 a,
+.l-bloc h5 a,
+.l-bloc h6 a,
+.l-bloc p a {
+  color: rgba(0, 0, 0, 0.6);
+}
 .d-bloc .a-btn:hover,
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
@@ -150,9 +236,26 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-  color: rgba(255, 255, 255, 1);
+  /*color: rgba(255, 255, 255, 1);*/
+  color: rgba(0, 0, 0, 1);
 }
-
+.d-bloc .panel .a-btn:focus,
+.l-bloc .a-btn:focus,
+.l-bloc .navbar a:focus,
+.l-bloc .navbar-brand:focus,
+.l-bloc a:focus .icon-sm,
+.l-bloc a:focus .icon-md,
+.l-bloc a:focus .icon-lg,
+.l-bloc a:focus .icon-xl,
+.l-bloc h1 a:focus,
+.l-bloc h2 a:focus,
+.l-bloc h3 a:focus,
+.l-bloc h4 a:focus,
+.l-bloc h5 a:focus,
+.l-bloc h6 a:focus,
+.l-bloc p a:focus {
+  color: rgba(0, 0, 0, 1);
+}
 .d-bloc .navbar-toggle .icon-bar {
   background: rgba(255, 255, 255, 1);
 }
