@@ -9,7 +9,7 @@ body {
 
 a,
 button {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /*outline: none!important;*/
 }
 
@@ -66,10 +66,10 @@ a:hover {
 .bg-tr-edge,
 .bg-br-edge,
 .bg-repeat {
-  -webkit-background-size: auto!important;
-  -moz-background-size: auto!important;
-  -o-background-size: auto!important;
-  background-size: auto!important;
+  -webkit-background-size: auto;/*!important*/
+  -moz-background-size: auto;/*!important;*/
+  -o-background-size: auto;/*!important;*/
+  background-size: auto;/*!important;*/
 }
 
 .bg-repeat {
@@ -222,6 +222,7 @@ a:hover {
 .l-bloc p a {
   color: rgba(0, 0, 0, 0.6);
 }
+.d-bloc .panel .a-btn:hover, /*Ajoute*/
 .d-bloc .a-btn:hover,
 .d-bloc .navbar a:hover,
 .d-bloc .navbar-brand:hover,
@@ -256,10 +257,13 @@ a:hover {
 .l-bloc p a:focus {
   color: rgba(0, 0, 0, 1);
 }
-.d-bloc .navbar-toggle .icon-bar {
-  background: rgba(255, 255, 255, 1);
+/*.d-bloc .navbar-toggle .icon-bar {*/
+.l-bloc .navbar-toggle .icon-bar {
+  /*background: rgba(255, 255, 255, 1);*/
+  color: rgba(0, 0, 0, 0.6);
 }
 
+/*
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
   color: rgba(255, 255, 255, 1);
@@ -358,13 +362,16 @@ a:hover {
 .l-bloc .navbar-toggle .icon-bar {
   color: rgba(0, 0, 0, .6);
 }
-
+*/
 .d-bloc .panel .btn-wire,
 .d-bloc .panel .btn-wire:hover,
 .l-bloc .btn-wire,
-.l-bloc .btn-wire:hover {
-  color: rgba(0, 0, 0, .7);
-  border-color: rgba(0, 0, 0, .3);
+.l-bloc .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus,  /*Ajoute*/
+.l-bloc .btn-wire:focus    /*Ajoute*/
+{
+  color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .voffset {
@@ -438,6 +445,7 @@ a:hover {
 .nav > li a:hover,
 .nav > li a:focus {
   background: transparent;
+  text-decoration: underline;/*Ajoute*/
 }
 
 .navbar-toggle {
@@ -445,8 +453,10 @@ a:hover {
   border: 0px;
 }
 
-.navbar-toggle:hover {
-  background: transparent!important;
+.navbar-toggle:hover
+.navbar-toggle:focus /*Ajoute*/
+ {
+  background: transparent /*!important;*/
 }
 
 .navbar-toggle .icon-bar {
@@ -560,22 +570,23 @@ nav .caret {
 .btn-d:hover,
 .btn-d:focus {
   color: #FFF;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-button {
+/*button {
   outline: none!important;
 }
-
+*/
 .btn-rd {
   border-radius: 40px;
 }
 
 .btn-clean {
   border: 1px solid rgba(0, 0, 0, .08);
-  border-bottom-color: rgba(0, 0, 0, .1);
-  text-shadow: 0 1px 0 rgba(0, 0, 1, .1);
-  box-shadow: 0 1px 3px rgba(0, 0, 1, .25), inset 0 1px 0 0 rgba(255, 255, 255, .15);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 1, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 1, 0.25), 
+  inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
 }
 
 .icon-md {
@@ -587,7 +598,7 @@ button {
 }
 
 .sm-shadow {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .panel-sq,
@@ -609,7 +620,7 @@ button {
 }
 
 .form-control {
-  border-color: rgba(0, 0, 0, .1);
+  border-color: rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
 
@@ -621,7 +632,7 @@ button {
   right: 20px;
   opacity: 0;
   z-index: 500;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .scrollToTop span {
@@ -639,9 +650,12 @@ a[data-lightbox] {
   text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before 
+a[data-lightbox]:focus::before /*ajoute*/
+{
   content: "+";
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 
+  "Helvetica Neue", Helvetica, Arial;
   font-size: 32px;
   width: 50px;
   height: 50px;
@@ -657,7 +671,9 @@ a[data-lightbox]:hover::before {
   -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img 
+a[data-lightbox]:focus img /*ajoute*/
+{
   opacity: 0.6;
   -webkit-animation-fill-mode: none;
   animation-fill-mode: none;
@@ -696,7 +712,7 @@ a[data-lightbox]:hover img {
   top: 20px;
   right: 20px;
   z-index: 20;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   line-height: 30px;
   padding: 0 9px 5px;
@@ -705,7 +721,11 @@ a[data-lightbox]:hover img {
 
 .close-lightbox:hover,
 .next-lightbox:hover,
-.prev-lightbox:hover {
+.prev-lightbox:hover
+.close-lightbox:focus,/*Ajoute*/
+.next-lightbox:focus,/*ajoute*/
+.prev-lightbox:focus/*ajoute*/
+{
   opacity: 1.0;
   color: #FFF;
 }
@@ -713,9 +733,9 @@ a[data-lightbox]:hover img {
 .next-lightbox,
 .prev-lightbox {
   font-size: 20px;
-  color: rgba(255, 255, 255, .9);
-  background: rgba(0, 0, 0, .5);
-  transition: all .2s ease-in-out;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
   position: absolute;
   top: 45%;
   z-index: 1;
@@ -738,7 +758,7 @@ a[data-lightbox]:hover img {
 
 .snapshot-lb .lightbox-caption {
   padding: 0;
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
   background: none;
 }
 
@@ -751,10 +771,13 @@ h6,
 p,
 label,
 .btn,
-a {
+a,
+figcaption
+{
   font-family: "helvetica";
   font-weight: 400;
-  color: #575757!important;
+  /*color: #575757!important;*/
+  color: #404040;
 }
 
 .container {
@@ -780,7 +803,8 @@ a {
 }
 
 p {
-  font-size: 11px;
+ /* font-size: 11px;*/
+ font-size: 16px;
 }
 
 .tight-width-whitespace {
@@ -886,7 +910,9 @@ h4 {
   color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
+.btn-atomic-tangerine:hover,
+.btn-atomic-tangerine:focus /*AJOUTE*/
+ {
   background: #c27956!important;
   color: #FFFFFF!important;
 }
@@ -895,7 +921,9 @@ h4 {
   color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
+.ltc-white:hover , 
+.ltc-white:focus /*AJOUTE*/
+{
   color: #cccccc!important;
 }
 
@@ -903,7 +931,9 @@ h4 {
   color: #F3976C!important;
 }
 
-.ltc-atomic-tangerine:hover {
+.ltc-atomic-tangerine:hover
+.ltc-atomic-tangerine:focus/*ajoute*/
+{
   color: #c27956!important;
 }
 
@@ -913,19 +943,19 @@ h4 {
 }
 
 .bg-dots-bg {
-  background-image: url("img/dots-bg.png");
+  background-image: url("../img/dots-bg.png");
 }
-
+/*
 .bg-lines-h2-bg {
   background-image: url("img/lines-h2-bg.png");
 }
-
+*/
 .bg-banniere {
-  background-image: url("img/la-chouette-agence-banniere.jpg");
+  background-image: url("../img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-  background-image: url("img/image-de-presentation.bmp");
+  background-image: url("../img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -951,13 +981,15 @@ h4 {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+and (orientation: landscape) {
   .b-parallax {
       background-attachment: scroll;
   }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 1.5) {
   .b-parallax {
       background-attachment: scroll;
   }
@@ -1013,7 +1045,7 @@ h4 {
   }
   .navbar .nav {
       padding-top: 0;
-      border-top: 1px solid rgba(0, 0, 0, .2);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
       float: none!important;
   }
   .navbar.row {
@@ -1028,14 +1060,14 @@ h4 {
   }
   .nav > li {
       margin-top: 0;
-      border-bottom: 1px solid rgba(0, 0, 0, .1);
-      background: rgba(0, 0, 0, .05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0,0.05);
       text-align: left;
       padding-left: 15px;
       width: 100%;
   }
   .nav > li:hover {
-      background: rgba(0, 0, 0, .08);
+      background: rgba(0, 0, 0, 0.08);
   }
   .dropdown .dropdown a .caret {
       float: none;
@@ -1046,10 +1078,10 @@ h4 {
       border-left-color: transparent;
   }
   #hero-bloc .navbar .nav {
-      background: rgba(0, 0, 0, .8);
+      background: rgba(0, 0, 0, 0.8);
   }
   #hero-bloc .navbar .nav a {
-      color: rgba(255, 255, 255, .6);
+      color: rgba(255, 255, 255, 0.6);
   }
   .hero {
       padding: 50px 0;
