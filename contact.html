@@ -2,16 +2,22 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="keywords" content="seo, google, site web, site internet, agence design paris, agence design, agence design,agence design,agence design,agence design,agence design,agence design,agence design,agence design" />
-    <meta name="description" content="La chouette agence est une agence de web design
+    <meta
+      name="keywords"
+      content="seo, google, site web, site internet, agence design paris, agence design, agence design,agence design,agence design,agence design,agence design,agence design,agence design,agence design"
+    />
+    <meta
+      name="description"
+      content="La chouette agence est une agence de web design
     qui aide les entreprises à devenir attractives et visibles sur Internet.
      Nous souhaitons aider les entreprises de la région Lyonnaise 
      à se développer et à connaître le succès. 
      Nous travaillons pour aider les entreprises
-      locales à attirer de nouveaux clients." />
-    <meta name="viewport"
-  
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      locales à attirer de nouveaux clients."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <link rel="shortcut icon" type="image/png" href="favicon.jpg" />
 
@@ -101,8 +107,7 @@
         <div class="container bloc-lg">
           <div class="row">
             <div class="col-sm-6">
-              <form id="form_1" novalidate success-msg="Votre message a bien été envoyé."
-                fail-msg="Il semble que notre serveur mail ne réponde pas. Nous sommes désolés de ce dérangement.">
+              <form id="form_1" novalidate onsubmit="successMsg()">
                 <div class="form-group">
                   <label>
                     Nom
@@ -112,7 +117,12 @@
                 <div class="form-group">
                   <label>
                     Adresse email
-                    <input id="email" class="form-control" type="email" required />
+                    <input
+                      id="email"
+                      class="form-control"
+                      type="email"
+                      required
+                    />
                   </label>
                 </div>
                 <div class="form-group">
@@ -123,20 +133,34 @@
                 </div>
                 <div class="form-group">
                   <label>
-                    Brief de votre projet (Ajoutez autant de détails que nécessaire)
-                    <textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+                    Brief de votre projet (Ajoutez autant de détails que
+                    nécessaire)
+                    <textarea
+                      id="message"
+                      class="form-control"
+                      rows="4"
+                      cols="50"
+                      required
+                    ></textarea>
                   </label>
                 </div>
-                <button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine"
-                  type="submit">
+                <button
+                  class="
+                    bloc-button
+                    btn btn-lg btn-block
+                    cta-hero
+                    btn-atomic-tangerine
+                  "
+                  type="submit"
+                >
                   Envoyer
                 </button>
               </form>
             </div>
             <div class="col-sm-6">
               <p>
-                contact@lachouetteagence.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi
-                au vendredi<br>
+                contact@lachouetteagence.com<br />2 place Sathonay 69001 Lyon<br />Ouvert
+                de 9h à 18h, du lundi au vendredi<br />
               </p>
             </div>
           </div>
@@ -200,5 +224,16 @@
       <!-- Footer - bloc-8 END -->
     </div>
     <!-- Principal conteneur END -->
+    <script>
+      function successMsg() {
+        alert("Votre message a bien été envoyé.");
+      }
+      function failMsg() {
+        alert(
+          "Il semble que notre serveur mail ne réponde pas. Nous sommes désolés de ce dérangement."
+        );
+      }
+    </script>
   </body>
+  
 </html>
